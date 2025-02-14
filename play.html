@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shrek Love Page</title>
+    <style>
+        body {
+            background-color: pink;
+            background-image: url('https://www.transparenttextures.com/patterns/hearts.png');
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        #play-button {
+            width: 100px;
+            cursor: pointer;
+        }
+        #shrek-gif {
+            width: 600px;
+        }
+        .romantic-text {
+            font-size: 44px;
+            color: white;
+            font-family: 'Cursive', sans-serif;
+            margin-bottom: 30px;
+        }
+        .play-button {
+            margin-bottom: 20px;
+            width: 80px;
+            height: 80px;
+            background-color: blue;
+            border: none;
+            border-radius: 50%;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .play-button:hover {
+            background-color: darkred;
+        }
+        #message {
+            font-size: 44px;
+            color: white;
+            font-family: 'Cursive', sans-serif;
+            margin-bottom: 30px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="romantic-text">Press play</div>
+    <button class="play-button" onclick="playAudio()">▶</button>
+    <div id="message">Be Ready by 1 PM tomorrow ;)</div>
+    <br>
+    <img id="shrek-gif" src="Happy Shrek GIF.gif" alt="Shrek GIF">
+    <audio id="audio" src="audio.m4a"></audio>
+    
+    <script>
+        function playAudio() {
+            document.getElementById('audio').play();
+            document.getElementById('message').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
